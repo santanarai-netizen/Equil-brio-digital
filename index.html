@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
+    <title>🌱 Bem-estar Digital · Uso Consciente</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        /* ============================================================
+           style.css - versão super ampliada com mais conteúdo
+           ============================================================ */
+
+        /* ---------- reset e base ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(145deg, #f7efe4 0%, #ffe6d0 100%);
+            min-height: 100vh;
+            padding: 2rem 1.5rem 4rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 1600px;
+            width: 100%;
+            background: rgba(255, 252, 245, 0.85);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            border-radius: 64px 64px 40px 40px;
+            padding: 3rem 3rem 2.5rem;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08), 0 12px 24px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+        }
+
+        /* ---------- cabeçalho GRANDE ---------- */
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.8rem;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-size: 3.6rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #1e6b3e, #4caf7a, #2b8a5a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -1px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            animation: pulseGlow 3s infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% {
+                text-shadow: 0 0 4px rgba(44, 160, 90, 0.2);
+            }
+            100% {
+                text-shadow: 0 0 30px rgba(44, 160, 90, 0.4);
+            }
+        }
+
+        .header h1 i {
+            font-size: 3.8rem;
+            color: #2b7a4b;
+            animation: float 3.5s ease-in-out infinite;
+            -webkit-text-fill-color: #2b7a4b;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-12px) rotate(2deg);
+            }
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+        }
+
+        .accessibility-tools {
+            display: flex;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .accessibility-tools button {
+            background: #ffffffdd;
+            backdrop-filter: blur(4px);
+            border: 3px solid #4caf7a;
+            border-radius: 60px;
+            padding: 0.9rem 2rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: #1a4d2e;
+            cursor: pointer;
+            transition: 0.25s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+            min-height: 60px;
+            min-width: 120px;
+        }
+
+        .accessibility-tools button:hover,
+        .accessibility-tools button:focus {
+            background: #4caf7a;
+            color: white;
+            border-color: #1e6b3e;
+            transform: scale(1.04);
+            outline: 3px solid #1e6b3e;
+            outline-offset: 2px;
+        }
+
+        .accessibility-tools button:focus-visible {
+            outline: 4px solid #1e6b3e;
+            outline-offset: 3px;
+        }
+
+        .accessibility-tools button i {
+            font-size: 1.6rem;
+        }
+
+        /* ---------- INTRODUÇÃO ---------- */
+        .intro-text {
+            background: linear-gradient(135deg, #e6f5ec, #d4efe0);
+            border-radius: 40px;
+            padding: 2.5rem 3rem;
+            margin-bottom: 3rem;
+            border: 2px solid #b7dfcb;
+        }
+
+        .intro-text h2 {
+            font-size: 2.8rem;
+            color: #1f5437;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .intro-text p {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            color: #1d3b2b;
+            max-width: 900px;
+        }
+
+        /* ---------- BANNER com IMAGENS ---------- */
+        .banner-imagens {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem 4rem;
+            background: linear-gradient(120deg, #e6f5ec, #d4efe0);
+            border-radius: 60px;
+            padding: 2.5rem 3rem;
+            margin-bottom: 3rem;
+            border: 2px solid #b7dfcb;
+            box-shadow: inset 0 0 30px rgba(76, 175, 122, 0.08);
+        }
+
+        .banner-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #1f5437;
+            transition: 0.25s;
+            animation: softBounce 4s infinite alternate;
+            padding: 0.5rem 1.5rem;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(4px);
+            border-radius: 40px;
+            min-width: 150px;
+            cursor: default;
+        }
+
+        .banner-item:focus-visible {
+            outline: 3px solid #2b7a4b;
+            outline-offset: 4px;
+        }
+
+        .banner-item i {
+            font-size: 5.5rem;
+            color: #236b44;
+            filter: drop-shadow(0 8px 12px rgba(35, 107, 68, 0.15));
+        }
+
+        .banner-item span {
+            font-size: 1.4rem;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 0.2rem 1.6rem;
+            border-radius: 60px;
+        }
+
+        @keyframes softBounce {
+            0% {
+                transform: translateY(0px);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Reduzir movimento para pessoas com sensibilidade */
+        @media (prefers-reduced-motion: reduce) {
+            .banner-item {
+                animation: none;
+            }
+            .header h1 i {
+                animation: none;
+            }
+            .header h1 {
+                animation: none;
+            }
+            .curiosidades {
+                animation: none;
+            }
+        }
+
+        .banner-item:nth-child(1) {
+            animation-delay: 0s;
+        }
+        .banner-item:nth-child(2) {
+            animation-delay: 0.6s;
+        }
+        .banner-item:nth-child(3) {
+            animation-delay: 1.2s;
+        }
+        .banner-item:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+        .banner-item:nth-child(5) {
+            animation-delay: 0.9s;
+        }
+        .banner-item:nth-child(6) {
+            animation-delay: 1.5s;
+        }
+
+        /* ---------- CARDS grandes ---------- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem 2rem;
+            margin: 3rem 0 2.5rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 48px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 12px 32px rgba(0, 30, 20, 0.07);
+            transition: all 0.3s;
+            border: 2px solid rgba(76, 175, 122, 0.15);
+            backdrop-filter: blur(2px);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            cursor: default;
+        }
+
+        .card:hover,
+        .card:focus {
+            transform: translateY(-10px);
+            border-color: #4caf7a;
+            box-shadow: 0 24px 48px rgba(44, 160, 90, 0.18);
+        }
+
+        .card:focus-visible {
+            outline: 3px solid #2b7a4b;
+            outline-offset: 4px;
+        }
+
+        .card i {
+            font-size: 4rem;
+            color: #2b7a4b;
+            margin-bottom: 0.8rem;
+            background: #e6f5ec;
+            padding: 0.8rem;
+            border-radius: 28px;
+        }
+
+        .card h3 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #1d3b2b;
+            margin-bottom: 0.3rem;
+        }
+
+        .card p {
+            color: #2f4d3c;
+            line-height: 1.7;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .card .emoji-big {
+            font-size: 4rem;
+            margin: 0.8rem 0 0.2rem;
+        }
+
+        .card .dica {
+            background: #e6f5ec;
+            padding: 0.8rem 1.2rem;
+            border-radius: 20px;
+            font-size: 1.1rem;
+            color: #1d3b2b;
+            margin-top: 0.5rem;
+            border-left: 4px solid #2b7a4b;
+        }
+
+        .card .explicacao {
+            font-size: 1.1rem;
+            color: #3d5e4a;
+            line-height: 1.6;
+            margin-top: 0.5rem;
+            padding: 0.8rem;
+            background: #f5faf7;
+            border-radius: 16px;
+        }
+
+        /* ---------- SEÇÃO DE ESTATÍSTICAS ---------- */
+        .estatisticas {
+            background: linear-gradient(135deg, #1e6b3e, #2b8a5a);
+            border-radius: 48px;
+            padding: 2.5rem 3rem;
+            margin: 2.5rem 0 3rem;
+            color: white;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+            box-shadow: 0 12px 32px rgba(30, 107, 62, 0.3);
+        }
+
+        .estatisticas-item {
+            padding: 0.5rem;
+        }
+
+        .estatisticas-item .numero {
+            font-size: 3.5rem;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .estatisticas-item .label {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* ---------- SEÇÃO SOBRE O TEMA ---------- */
+        .sobre-tema {
+            background: #fefcf5;
+            border-radius: 48px;
+            padding: 2.5rem 3rem;
+            margin: 2.5rem 0 3rem;
+            border: 2px solid #cfe3d8;
+        }
+
+        .sobre-tema h2 {
+            font-size: 2.8rem;
+            color: #1f5437;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .sobre-tema p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: #2f4d3c;
+            margin-bottom: 1rem;
+        }
+
+        .sobre-tema ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .sobre-tema ul li {
+            background: #f5faf7;
+            padding: 1rem 1.5rem;
+            border-radius: 20px;
+            border-left: 4px solid #4caf7a;
+            font-size: 1.1rem;
+            color: #1d3b2b;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .sobre-tema ul li i {
+            color: #2b7a4b;
+            font-size: 1.5rem;
+        }
+
+        /* ---------- SEÇÃO DE DICAS DETALHADAS ---------- */
+        .dicas-detalhadas {
+            background: #fefcf5;
+            border-radius: 48px;
+            padding: 2.5rem 3rem;
+            margin: 2.5rem 0 3rem;
+            border: 2px solid #cfe3d8;
+        }
+
+        .dicas-detalhadas h2 {
+            font-size: 2.8rem;
+            color: #1f5437;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .dicas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .dica-item {
+            background: #f5faf7;
+            padding: 1.5rem;
+            border-radius: 32px;
+            border-left: 6px solid #4caf7a;
+            transition: 0.3s;
+            cursor: default;
+        }
+
+        .dica-item:hover,
+        .dica-item:focus {
+            transform: translateX(6px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .dica-item:focus-visible {
+            outline: 3px solid #2b7a4b;
+            outline-offset: 4px;
+        }
+
+        .dica-item h4 {
+            font-size: 1.4rem;
+            color: #1d3b2b;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .dica-item p {
+            font-size: 1.1rem;
+            color: #2f4d3c;
+            line-height: 1.6;
+        }
+
+        /* ---------- CURIOSIDADES ---------- */
+        .curiosidades {
+            background: #d9f0e3;
+            border-radius: 48px;
+            padding: 2.5rem 3rem;
+            margin: 2.5rem 0 3rem;
+            border-left: 16px solid #2b7a4b;
+            transition: 0.2s;
+            animation: fadeSlide 0.9s;
+        }
+
+        @keyframes fadeSlide {
+            0% {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .curiosidades h2 {
+            font-size: 2.8rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: #154d2c;
+            margin-bottom: 0.5rem;
+        }
+
+        .curiosidades ul {
+            list-style: none;
+            margin-top: 1.2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem 2.5rem;
+        }
+
+        .curiosidades li {
+            background: white;
+            padding: 0.9rem 2.2rem 0.9rem 1.8rem;
+            border-radius: 60px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02);
+            border: 2px solid #b7dfcb;
+        }
+
+        .curiosidades li i {
+            color: #2b7a4b;
+            font-size: 1.8rem;
+        }
+
+        /* ---------- QUIZ ---------- */
+        .quiz-box {
+            background: #fefcf5;
+            border-radius: 48px;
+            padding: 2.5rem 3rem;
+            margin: 2.5rem 0 1.5rem;
+            box-shadow: inset 0 0 0 2px #cfe3d8;
+        }
+
+        .quiz-box h2 {
+            font-size: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: #1f5437;
+        }
+
+        .question {
+            font-size: 1.9rem;
+            font-weight: 600;
+            margin: 1.5rem 0 1.8rem;
+            color: #143d26;
+        }
+
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .options label {
+            background: #ecf9f1;
+            padding: 1rem 2.4rem;
+            border-radius: 60px;
+            border: 3px solid transparent;
+            transition: 0.2s;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1.4rem;
+            min-height: 60px;
+        }
+
+        .options label:hover,
+        .options label:focus-within {
+            background: #c8ebd9;
+            border-color: #4caf7a;
+        }
+
+        .options label:focus-within {
+            outline: 3px solid #2b7a4b;
+            outline-offset: 2px;
+        }
+
+        .options input[type="radio"] {
+            width: 1.8rem;
+            height: 1.8rem;
+            accent-color: #2b7a4b;
+            cursor: pointer;
+        }
+
+        .options input[type="radio"]:focus-visible {
+            outline: 3px solid #1e6b3e;
+            outline-offset: 2px;
+        }
+
+        .quiz-feedback {
+            background: #e3f0e9;
+            border-radius: 40px;
+            padding: 1rem 2.5rem;
+            font-size: 1.5rem;
+            display: inline-block;
+            margin-top: 0.8rem;
+            min-height: 70px;
+            min-width: 200px;
+        }
+
+        .btn-quiz {
+            background: #2b7a4b;
+            border: none;
+            color: white;
+            font-weight: 700;
+            font-size: 1.8rem;
+            padding: 1.2rem 4rem;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: 0.25s;
+            box-shadow: 0 12px 28px rgba(43, 122, 75, 0.35);
+            margin: 0.8rem 0 1.2rem;
+            min-height: 70px;
+            min-width: 200px;
+        }
+
+        .btn-quiz:hover,
+        .btn-quiz:focus {
+            background: #1f5f3b;
+            transform: scale(1.04);
+        }
+
+        .btn-quiz:focus-visible {
+            outline: 4px solid #1e6b3e;
+            outline-offset: 3px;
+        }
+
+        /* ---------- RODAPÉ ---------- */
+        .footer {
+            margin-top: 3.5rem;
+            text-align: center;
+            font-size: 1.4rem;
+            color: #2d5b41;
+            border-top: 3px dashed #88c7ab;
+            padding-top: 2.5rem;
+            width: 100%;
+        }
+
+        .footer i {
+            font-size: 2rem;
+            color: #2b7a4b;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .footer-links a {
+            color: #2b7a4b;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+        }
+
+        .footer-links a:hover,
+        .footer-links a:focus {
+            color: #1e6b3e;
+            text-decoration: underline;
+            background: rgba(43, 122, 75, 0.1);
+        }
+
+        .footer-links a:focus-visible {
+            outline: 3px solid #2b7a4b;
+            outline-offset: 3px;
+        }
+
+        /* ===== ACESSIBILIDADE: alto contraste ===== */
+        .high-contrast {
+            background: #0f1f17 !important;
+            color: #f1ffe7 !important;
+        }
+        .high-contrast .container {
+            background: #1a3326 !important;
+            color: #e7ffe0 !important;
+        }
+        .high-contrast .card {
+            background: #264d36 !important;
+            border-color: #8bc3a5 !important;
+            color: #f0fff0 !important;
+        }
+        .high-contrast .card p,
+        .high-contrast .card h3 {
+            color: #f0fff0 !important;
+        }
+        .high-contrast .card .dica {
+            background: #1e4d36 !important;
+            color: #f0fff0 !important;
+            border-left-color: #7bc99c !important;
+        }
+        .high-contrast .card .explicacao {
+            background: #1e4d36 !important;
+            color: #f0fff0 !important;
+        }
+        .high-contrast .curiosidades {
+            background: #1b452f !important;
+            border-left-color: #b0e6c9 !important;
+        }
+        .high-contrast .curiosidades li {
+            background: #2b5f42 !important;
+            color: white !important;
+            border-color: #6aa583 !important;
+        }
+        .high-contrast .quiz-box {
+            background: #1b3d2b !important;
+            box-shadow: inset 0 0 0 2px #6aa583 !important;
+        }
+        .high-contrast .options label {
+            background: #326b4a !important;
+            color: white !important;
+        }
+        .high-contrast .options label:hover {
+            background: #4c8a66 !important;
+        }
+        .high-contrast .btn-quiz {
+            background: #7bc99c !important;
+            color: #0a1f13 !important;
+        }
+        .high-contrast .btn-quiz:hover {
+            background: #96d9b3 !important;
+        }
+        .high-contrast .banner-imagens {
+            background: #1e4d36 !important;
+            border-color: #6aa583 !important;
+        }
+        .high-contrast .banner-item {
+            background: #2d5f43 !important;
+            color: #f0fff0 !important;
+        }
+        .high-contrast .banner-item i {
+            color: #b0e6c9 !important;
+        }
+        .high-contrast .banner-item span {
+            background: #1f4d34 !important;
+            color: white !important;
+        }
+        .high-contrast .estatisticas {
+            background: #0f2f1e !important;
+        }
+        .high-contrast .dicas-detalhadas {
+            background: #1f3d2b !important;
+            border-color: #4caf7a !important;
+        }
+        .high-contrast .dica-item {
+            background: #2b5f42 !important;
+            border-left-color: #7bc99c !important;
+        }
+        .high-contrast .dica-item h4,
+        .high-contrast .dica-item p {
+            color: #f0fff0 !important;
+        }
+        .high-contrast .footer {
+            border-top-color: #4caf7a !important;
+        }
+        .high-contrast .footer-links a {
+            color: #7bc99c !important;
+        }
+        .high-contrast .footer-links a:hover {
+            color: #b0e6c9 !important;
+        }
+        .high-contrast .quiz-feedback {
+            background: #1e4d36 !important;
+            color: #f0fff0 !important;
+        }
+        .high-contrast .question {
+            color: #f0fff0 !important;
+        }
+        .high-contrast .curiosidades h2,
+        .high-contrast .dicas-detalhadas h2,
+        .high-contrast .quiz-box h2,
+        .high-contrast .intro-text h2,
+        .high-contrast .sobre-tema h2 {
+            color: #b0e6c9 !important;
+        }
+        .high-contrast .intro-text {
+            background: #1b452f !important;
+            border-color: #6aa583 !important;
+        }
+        .high-contrast .intro-text p {
+            color: #f0fff0 !important;
+        }
+        .high-contrast .sobre-tema {
+            background: #1f3d2b !important;
+            border-color: #4caf7a !important;
+        }
+        .high-contrast .sobre-tema p {
+            color: #f0fff0 !important;
+        }
+        .high-contrast .sobre-tema ul li {
+            background: #2b5f42 !important;
+            color: #f0fff0 !important;
+        }
+        .high-contrast .accessibility-tools button {
+            background: #264d36 !important;
+            color: #f0fff0 !important;
+            border-color: #7bc99c !important;
+        }
+        .high-contrast .accessibility-tools button:hover {
+            background: #4c8a66 !important;
+        }
+
+        /* ===== ACESSIBILIDADE: fonte grande ===== */
+        .font-large {
+            font-size: 1.6rem !important;
+            line-height: 1.7 !important;
+        }
+        .font-large .card p,
+        .font-large .question,
+        .font-large li,
+        .font-large .banner-item span,
+        .font-large .dica-item p,
+        .font-large .intro-text p,
+        .font-large .sobre-tema p,
+        .font-large .explicacao {
+            font-size: 1.8rem !important;
+        }
+        .font-large .header h1 {
+            font-size: 4.2rem !important;
+        }
+        .font-large .card h3 {
+            font-size: 2.8rem !important;
+        }
+        .font-large .curiosidades h2,
+        .font-large .quiz-box h2,
+        .font-large .dicas-detalhadas h2,
+        .font-large .intro-text h2,
+        .font-large .sobre-tema h2 {
+            font-size: 3.4rem !important;
+        }
+        .font-large .estatisticas-item .numero {
+            font-size: 4.5rem !important;
+        }
+        .font-large .estatisticas-item .label {
+            font-size: 1.6rem !important;
+        }
+        .font-large .dica-item h4 {
+            font-size: 1.8rem !important;
+        }
+        .font-large .sobre-tema ul li {
+            font-size: 1.6rem !important;
+            padding: 1.2rem 1.8rem;
+        }
+        .font-large .options label {
+            font-size: 1.6rem !important;
+            padding: 1.2rem 2.8rem;
+        }
+
+        /* ===== RESPONSIVIDADE ===== */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.8rem 1.2rem;
+            }
+            .header h1 {
+                font-size: 2.6rem;
+            }
+            .header h1 i {
+                font-size: 2.8rem;
+            }
+            .banner-item i {
+                font-size: 3.8rem;
+            }
+            .banner-item {
+                min-width: 100px;
+                padding: 0.3rem 1rem;
+            }
+            .banner-item span {
+                font-size: 1.1rem;
+            }
+            .card h3 {
+                font-size: 1.9rem;
+            }
+            .card p {
+                font-size: 1.1rem;
+            }
+            .curiosidades h2 {
+                font-size: 2.2rem;
+            }
+            .curiosidades li {
+                font-size: 1.1rem;
+            }
+            .question {
+                font-size: 1.5rem;
+            }
+            .options label {
+                font-size: 1.1rem;
+                padding: 0.7rem 1.6rem;
+            }
+            .btn-quiz {
+                font-size: 1.4rem;
+                padding: 0.9rem 2.8rem;
+            }
+            .quiz-feedback {
+                font-size: 1.2rem;
+            }
+            .accessibility-tools button {
+                font-size: 1rem;
+                padding: 0.6rem 1.4rem;
+            }
+            .estatisticas {
+                padding: 1.8rem;
+                gap: 1rem;
+            }
+            .estatisticas-item .numero {
+                font-size: 2.5rem;
+            }
+            .dicas-detalhadas {
+                padding: 1.8rem;
+            }
+            .dicas-detalhadas h2 {
+                font-size: 2.2rem;
+            }
+            .dica-item h4 {
+                font-size: 1.2rem;
+            }
+            .dica-item p {
+                font-size: 1rem;
+            }
+            .intro-text {
+                padding: 1.8rem;
+            }
+            .intro-text h2 {
+                font-size: 2.2rem;
+            }
+            .intro-text p {
+                font-size: 1.1rem;
+            }
+            .sobre-tema {
+                padding: 1.8rem;
+            }
+            .sobre-tema h2 {
+                font-size: 2.2rem;
+            }
+            .sobre-tema p {
+                font-size: 1.1rem;
+            }
+            .sobre-tema ul li {
+                font-size: 1rem;
+                padding: 0.8rem 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 1.2rem 0.8rem;
+                border-radius: 32px;
+            }
+            .header h1 {
+                font-size: 2rem;
+            }
+            .banner-imagens {
+                gap: 1rem;
+                padding: 1.5rem 1rem;
+            }
+            .banner-item i {
+                font-size: 2.8rem;
+            }
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            .card {
+                padding: 1.8rem 1.5rem;
+            }
+            .estatisticas {
+                grid-template-columns: 1fr 1fr;
+                padding: 1.2rem;
+            }
+            .estatisticas-item .numero {
+                font-size: 2rem;
+            }
+            .dicas-grid {
+                grid-template-columns: 1fr;
+            }
+            .curiosidades ul {
+                flex-direction: column;
+            }
+            .curiosidades li {
+                font-size: 1rem;
+                padding: 0.7rem 1.2rem;
+            }
+            .options {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            .options label {
+                font-size: 1rem;
+                padding: 0.6rem 1.2rem;
+            }
+            .sobre-tema ul {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="appContainer">
+
+        <!-- ===== CABEÇALHO ===== -->
+        <header class="header">
+            <h1><i class="fas fa-seedling"></i> bem-estar digital</h1>
+            <div class="accessibility-tools" role="toolbar" aria-label="ferramentas de acessibilidade">
+                <button id="contrastBtn" aria-label="alto contraste"><i class="fas fa-circle"></i> Contraste</button>
+                <button id="fontBtn" aria-label="aumentar fonte"><i class="fas fa-font"></i> Fonte +</button>
+            </div>
+        </header>
+
+        <!-- ===== INTRODUÇÃO ===== -->
+        <div class="intro-text">
+            <h2><i class="fas fa-heart"></i> O que é bem-estar digital?</h2>
+            <p>
+                O <strong>bem-estar digital</strong> é o estado de equilíbrio entre o uso da tecnologia e a qualidade de vida. 
+                Não se trata de abandonar os dispositivos, mas sim de usá-los de forma <strong>consciente e intencional</strong>, 
+                garantindo que eles sejam ferramentas que nos ajudam, e não que nos controlam. 
+                <br><br>
+                Em um mundo cada vez mais conectado, é essencial aprender a gerenciar nosso tempo online, proteger nossa saúde 
+                mental e manter relações humanas significativas. Este guia foi criado para ajudar você a refletir sobre seus 
+                hábitos digitais e adotar práticas mais saudáveis.
+            </p>
+        </div>
+
+        <!-- ===== BANNER com IMAGENS ===== -->
+        <div class="banner-imagens">
+            <div class="banner-item"><i class="fas fa-mobile-alt"></i><span>Uso consciente</span></div>
+            <div class="banner-item"><i class="fas fa-brain"></i><span>Saúde digital</span></div>
+            <div class="banner-item"><i class="fas fa-hand-holding-heart"></i><span>Equilíbrio</span></div>
+            <div class="banner-item"><i class="fas fa-tree"></i><span>Conecte-se à vida</span></div>
+            <div class="banner-item"><i class="fas fa-sleep"></i><span>Descanse</span></div>
+            <div class="banner-item"><i class="fas fa-users"></i><span>Interação real</span></div>
+        </div>
+
+        <!-- ===== CARDS PRINCIPAIS ===== -->
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-clock"></i>
+                <h3>Tempo de tela</h3>
+                <p>Defina limites diários e faça pausas a cada 50 minutos. Seu cérebro agradece!</p>
+                <div class="explicacao">
+                    <strong>Por que isso importa?</strong> O excesso de tempo em telas está associado a problemas como 
+                    fadiga ocular, dores de cabeça, ansiedade e até mesmo insônia. Ao estabelecer limites, você dá ao seu 
+                    cérebro o descanso necessário para se recuperar e processar informações de forma mais eficiente.
+                </div>
+                <div class="dica">💡 Dica: Use apps como "Digital Wellbeing" (Android) ou "Screen Time" (iOS) para monitorar e controlar seu uso.</div>
+                <span class="emoji-big">⏳</span>
+            </div>
+            <div class="card">
+                <i class="fas fa-moon"></i>
+                <h3>Modo noturno</h3>
+                <p>Luz azul atrapalha o sono. Ative o filtro de luz noturna após às 20h.</p>
+                <div class="explicacao">
+                    <strong>O que é a luz azul?</strong> A luz azul emitida por telas suprime a produção de melatonina, 
+                    o hormônio que regula o sono. Isso pode atrasar o início do sono, reduzir sua qualidade e até 
+                    contribuir para problemas de saúde a longo prazo.
+                </div>
+                <div class="dica">💡 Dica: Mantenha o celular longe da cama e estabeleça uma "hora de desconexão" 30 minutos antes de dormir.</div>
+                <span class="emoji-big">🌙</span>
+            </div>
+            <div class="card">
+                <i class="fas fa-users"></i>
+                <h3>Conexão real</h3>
+                <p>Priorize interações presenciais. O digital é ferramenta, não substituto.</p>
+                <div class="explicacao">
+                    <strong>O poder do contato humano:</strong> Estudos mostram que interações face a face liberam 
+                    ocitocina, o "hormônio do amor", que reduz o estresse e promove bem-estar. As conexões digitais 
+                    são valiosas, mas não substituem o calor humano.
+                </div>
+                <div class="dica">💡 Dica: Estabeleça momentos sem telas durante refeições, encontros com amigos e familiares.</div>
+                <span class="emoji-big">🤝</span>
+            </div>
+        </div>
+
+        <!-- ===== SEÇÃO SOBRE O TEMA ===== -->
+        <div class="sobre-tema">
+            <h2><i class="fas fa-info-circle"></i> Por que o bem-estar digital é importante?</h2>
+            <p>
+                O uso excessivo e descontrolado da tecnologia pode trazer consequências significativas para nossa saúde 
+                física e mental. Estudos mostram que o tempo excessivo em telas está relacionado a:
+            </p>
+            <ul>
+                <li><i class="fas fa-eye"></i> Fadiga ocular e visão turva</li>
+                <li><i class="fas fa-headache"></i> Dores de cabeça e tensão muscular</li>
+                <li><i class="fas fa-sad-tear"></i> Aumento da ansiedade e depressão</li>
+                <li><i class="fas fa-bed"></i> Distúrbios do sono e insônia</li>
+                <li><i class="fas fa-heart"></i> Isolamento social e relações superficiais</li>
+                <li><i class="fas fa-brain"></i> Dificuldade de concentração e memória</li>
+            </ul>
+            <p style="margin-top: 1.5rem;">
+                <strong>A boa notícia é que podemos mudar isso!</strong> Pequenas mudanças de hábito podem fazer uma 
+                enorme diferença na sua qualidade de vida. Nesta página, você vai encontrar dicas práticas, curiosidades 
+                e um quiz para testar seus conhecimentos sobre o tema.
+            </p>
+        </div>
+
+        <!-- ===== SEÇÃO DE ESTATÍSTICAS ===== -->
+        <div class="estatisticas">
+            <div class="estatisticas-item">
+                <span class="numero">3.5h</span>
+                <span class="label">Média diária em redes sociais no Brasil</span>
+            </div>
+            <div class="estatisticas-item">
+                <span class="numero">90%</span>
+                <span class="label">Checam o celular nos primeiros 15 minutos ao acordar</span>
+            </div>
+            <div class="estatisticas-item">
+                <span class="numero">30%</span>
+                <span class="label">Aumento da ansiedade com uso excessivo</span>
+            </div>
+            <div class="estatisticas-item">
+                <span class="numero">23min</span>
+                <span class="label">Tempo médio para retomar o foco após uma interrupção</span>
+            </div>
+        </div>
+
+        <!-- ===== SEÇÃO DE DICAS DETALHADAS ===== -->
+        <div class="dicas-detalhadas">
+            <h2><i class="fas fa-lightbulb"></i> Guia Prático para o Bem-estar Digital</h2>
+            <div class="dicas-grid">
+                <div class="dica-item">
+                    <h4><i class="fas fa-hourglass-half"></i> 1. Estabeleça limites de tempo</h4>
+                    <p>Defina horários específicos para usar dispositivos. Crie zonas livres de tecnologia, como o quarto 
+                    e a mesa de jantar. Use aplicativos de monitoramento para acompanhar seu uso diário e estabelecer 
+                    metas realistas de redução.</p>
+                </div>
+                <div class="dica-item">
+                    <h4><i class="fas fa-bell-slash"></i> 2. Silencie notificações desnecessárias</h4>
+                    <p>Desative notificações de aplicativos que não são essenciais. Cada notificação é uma interrupção 
+                    que quebra seu foco e aumenta a ansiedade. Mantenha apenas as notificações realmente importantes.</p>
+                </div>
+                <div class="dica-item">
+                    <h4><i class="fas fa-walking"></i> 3. Pratique pausas ativas</h4>
+                    <p>Levante-se, alongue-se e caminhe a cada 30-40 minutos. Isso melhora a circulação sanguínea, 
+                    reduz a fadiga visual e muscular, e ajuda a clarear a mente. A técnica Pomodoro (25 minutos de 
+                    foco, 5 de pausa) é excelente para isso.</p>
+                </div>
+                <div class="dica-item">
+                    <h4><i class="fas fa-book"></i> 4. Substitua hábitos digitais</h4>
+                    <p>Troque uma hora de redes sociais por leitura de livros, prática de exercícios físicos, 
+                    meditação ou hobbies criativos como desenhar, cozinhar ou tocar um instrumento. Seu cérebro 
+                    agradece a variedade de estímulos!</p>
+                </div>
+                <div class="dica-item">
+                    <h4><i class="fas fa-filter"></i> 5. Use filtros de luz azul</h4>
+                    <p>Ative o modo noturno no seu dispositivo ou use óculos com filtro de luz azul. Isso protege 
+                    seus olhos da fadiga digital e melhora significativamente a qualidade do seu sono. Faça isso 
+                    pelo menos 1 hora antes de dormir.</p>
+                </div>
+                <div class="dica-item">
+                    <h4><i class="fas fa-meditation"></i> 6. Pratique mindfulness digital</h4>
+                    <p>Antes de abrir um aplicativo ou pegar o celular, respire fundo e pergunte-se: 
+                    "Isso é realmente necessário agora?" Essa simples pausa consciente pode reduzir drasticamente 
+                    o uso impulsivo e aumentar sua intencionalidade.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CURIOSIDADES ===== -->
+        <section class="curiosidades" aria-label="curiosidades sobre bem-estar digital">
+            <h2><i class="fas fa-lightbulb"></i> Curiosidades que você precisa saber</h2>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> 90% das pessoas checam o celular nos primeiros 15 minutos após acordar, mesmo antes de levantar da cama.</li>
+                <li><i class="fas fa-check-circle"></i> O uso excessivo de redes sociais pode aumentar os níveis de ansiedade em até 30%.</li>
+                <li><i class="fas fa-check-circle"></i> Fazer pausas ativas de apenas 5 minutos a cada hora reduz significativamente a fadiga digital.</li>
+                <li><i class="fas fa-check-circle"></i> O cérebro humano leva em média 23 minutos para retomar o foco total após uma interrupção digital.</li>
+                <li><i class="fas fa-check-circle"></i> Em média, uma pessoa toca o celular mais de 2.600 vezes por dia.</li>
+                <li><i class="fas fa-check-circle"></i> O uso de telas antes de dormir pode reduzir a produção de melatonina em até 50%, prejudicando o sono.</li>
+                <li><i class="fas fa-check-circle"></i> Cerca de 60% das pessoas dormem com o celular ao lado ou embaixo do travesseiro.</li>
+                <li><i class="fas fa-check-circle"></i> A luz azul emitida por telas pode causar danos cumulativos à retina a longo prazo.</li>
+            </ul>
+        </section>
+
+        <!-- ===== QUIZ ===== -->
+        <div class="quiz-box" role="form" aria-label="quiz sobre uso consciente">
+            <h2><i class="fas fa-question-circle"></i> Quiz: Quanto você sabe sobre bem-estar digital?</h2>
+            <p style="font-size: 1.2rem; color: #2f4d3c; margin-bottom: 1rem;">
+                Teste seus conhecimentos respondendo as perguntas abaixo. Vamos ver se você é um especialista em 
+                bem-estar digital!
+            </p>
+            <div class="question" id="questionText">Qual é a recomendação geral para pausas durante o uso de telas?</div>
+            <div class="options" id="optionsContainer" role="radiogroup">
+                <label><input type="radio" name="quiz" value="0" /> 10 min a cada 2h</label>
+                <label><input type="radio" name="quiz" value="1" /> 5 min a cada 30 min</label>
+                <label><input type="radio" name="quiz" value="2" /> 15 min a cada 1h</label>
+                <label><input type="radio" name="quiz" value="3" /> 20 min a cada 3h</label>
+            </div>
+            <button class="btn-quiz" id="submitQuiz"><i class="fas fa-check"></i> Responder</button>
+            <div class="quiz-feedback" id="quizFeedback">👆 Escolha uma opção e clique em responder.</div>
+        </div>
+
+        <!-- ===== RODAPÉ ===== -->
+        <footer class="footer">
+            <p><i class="fas fa-leaf"></i> Bem-estar digital · uso consciente · projeto escolar 2026</p>
+            <p style="font-size:1.0rem; opacity:0.8; margin-top:0.4rem;">
+                Acessibilidade e responsividade para todos · ♿ Navegação por teclado · Leitores de tela compatíveis
+            </p>
+            <div class="footer-links">
+                <a href="#" aria-label="Voltar ao topo"><i class="fas fa-arrow-up"></i> Topo</a>
+                <a href="#" aria-label="Sobre o projeto"><i class="fas fa-info-circle"></i> Sobre</a>
+                <a href="#" aria-label="Compartilhar"><i class="fas fa-share-alt"></i> Compartilhar</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ============================================================
+    script.js - versão completa com acessibilidade
+    ============================================================ -->
+    <script>
+        (function() {
+            "use strict";
+
+            // ---- Garantir que o DOM está totalmente carregado ----
+            document.addEventListener('DOMContentLoaded', function() {
+                
+                // ---- elementos DOM ----
+                const contrastBtn = document.getElementById('contrastBtn');
+                const fontBtn = document.getElementById('fontBtn');
+                const quizFeedback = document.getElementById('quizFeedback');
+                const submitBtn = document.getElementById('submitQuiz');
+                const options = document.querySelectorAll('input[name="quiz"]');
+
+                // ---- Verificar se os elementos existem ----
+                if (!contrastBtn || !fontBtn) {
+                    console.error('Botões de acessibilidade não encontrados!');
+                    return;
+                }
+
+                // ---- alternância de alto contraste ----
+                contrastBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.body.classList.toggle('high-contrast');
+                    const isHighContrast = document.body.classList.contains('high-contrast');
+                    this.innerHTML = isHighContrast ?
+                        '<i class="fas fa-circle"></i> Contraste off' :
+                        '<i class="fas fa-circle"></i> Contraste';
+                    
+                    // Feedback para leitores de tela
+                    const mensagem = isHighContrast ? 'Modo de alto contraste ativado' : 'Modo de alto contraste desativado';
+                    anunciarParaLeitorTela(mensagem);
+                });
+
+                // ---- aumento de fonte (toggle) ----
+                fontBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.body.classList.toggle('font-large');
+                    const isLarge = document.body.classList.contains('font-large');
+                    this.innerHTML = isLarge ?
+                        '<i class="fas fa-font"></i> Fonte normal' :
+                        '<i class="fas fa-font"></i> Fonte +';
+                    
+                    // Feedback para leitores de tela
+                    const mensagem = isLarge ? 'Fonte aumentada' : 'Fonte normal';
+                    anunciarParaLeitorTela(mensagem);
+                });
+
+                // ---- Função para anunciar mudanças para leitores de tela ----
+                function anunciarParaLeitorTela(mensagem) {
+                    const anuncio = document.getElementById('anuncioAcessibilidade');
+                    if (anuncio) {
+                        anuncio.textContent = mensagem;
+                    }
+                }
+
+                // ---- dados do quiz (com mais perguntas) ----
+                const questions = [{
+                    question: "Qual é a recomendação geral para pausas durante o uso de telas?",
+                    options: ["10 min a cada 2h", "5 min a cada 30 min", "15 min a cada 1h", "20 min a cada 3h"],
+                    correct: 1,
+                    explicacao: "A recomendação mais aceita é fazer pausas de 5 minutos a cada 30 minutos de uso, ou a regra 20-20-20: a cada 20 minutos, olhe para um objeto a 20 pés (6 metros) por 20 segundos."
+                }, {
+                    question: "Quanto tempo o cérebro leva para retomar o foco após uma interrupção?",
+                    options: ["5 minutos", "15 minutos", "23 minutos", "30 minutos"],
+                    correct: 2,
+                    explicacao: "Estudos mostram que leva em média 23 minutos para retomar o foco total após uma interrupção. Por isso, é importante evitar distrações durante tarefas importantes."
+                }, {
+                    question: "O uso de telas antes de dormir pode reduzir a produção de qual hormônio?",
+                    options: ["Serotonina", "Melatonina", "Dopamina", "Adrenalina"],
+                    correct: 1,
+                    explicacao: "A luz azul das telas suprime a produção de melatonina, o hormônio que regula o ciclo do sono, podendo reduzir sua produção em até 50%."
+                }, {
+                    question: "Quantas vezes, em média, uma pessoa toca o celular por dia?",
+                    options: ["500 vezes", "1.000 vezes", "2.600 vezes", "5.000 vezes"],
+                    correct: 2,
+                    explicacao: "Estudos indicam que uma pessoa toca o celular em média 2.617 vezes por dia, com usuários mais pesados chegando a mais de 5.000 toques."
+                }];
+
+                let currentQuestionIndex = 0;
+                let totalCorrect = 0;
+                let answeredQuestions = 0;
+
+                // ---- carregar pergunta ----
+                function loadQuestion(index) {
+                    const q = questions[index];
+                    if (!q) {
+                        // Fim do quiz
+                        const percentual = Math.round((totalCorrect / questions.length) * 100);
+                        let mensagem = '';
+                        let nota = '';
+                        if (percentual === 100) {
+                            mensagem = '🌟 Perfeito! Você é um especialista em bem-estar digital!';
+                            nota = 'Excelente!';
+                        } else if (percentual >= 75) {
+                            mensagem = '👏 Muito bom! Você tem ótimos conhecimentos!';
+                            nota = 'Bom!';
+                        } else if (percentual >= 50) {
+                            mensagem = '📚 Bom! Continue aprendendo sobre o tema.';
+                            nota = 'Regular';
+                        } else {
+                            mensagem = '🌱 Que tal revisar o conteúdo e tentar novamente?';
+                            nota = 'Precisa melhorar';
+                        }
+                        
+                        const questionElement = document.getElementById('questionText');
+                        if (questionElement) {
+                            questionElement.textContent = '🎉 Quiz concluído!';
+                        }
+                        const optionsContainer = document.querySelector('.options');
+                        if (optionsContainer) {
+                            optionsContainer.style.display = 'none';
+                        }
+                        if (submitBtn) {
+                            submitBtn.style.display = 'none';
+                        }
+                        if (quizFeedback) {
+                            quizFeedback.innerHTML = `Você acertou ${totalCorrect} de ${questions.length} perguntas (${percentual}%). ${mensagem}`;
+                            quizFeedback.style.background = '#c8f0d6';
+                            quizFeedback.setAttribute('role', 'status');
+                        }
+                        return;
+                    }
+
+                    const questionElement = document.getElementById('questionText');
+                    if (questionElement) {
+                        questionElement.textContent = q.question;
+                    }
+                    
+                    const labels = document.querySelectorAll('.options label');
+                    labels.forEach((label, i) => {
+                        const radio = label.querySelector('input[type="radio"]');
+                        if (radio) {
+                            radio.value = i;
+                            // Remove texto antigo e adiciona nova opção
+                            const textNode = label.childNodes[1];
+                            if (textNode) label.removeChild(textNode);
+                            label.appendChild(document.createTextNode(' ' + q.options[i]));
+                            radio.checked = false;
+                            // Garantir que o label tenha um ID para acessibilidade
+                            radio.setAttribute('id', 'opcao' + i);
+                            label.setAttribute('for', 'opcao' + i);
+                        }
+                    });
+                    
+                    const optionsContainer = document.querySelector('.options');
+                    if (optionsContainer) {
+                        optionsContainer.style.display = 'flex';
+                    }
+                    if (submitBtn) {
+                        submitBtn.style.display = 'inline-block';
+                    }
+                    if (quizFeedback) {
+                        quizFeedback.innerHTML = `📝 Pergunta ${index + 1} de ${questions.length}. Escolha uma opção e responda.`;
+                        quizFeedback.style.background = '#e3f0e9';
+                        quizFeedback.setAttribute('role', 'status');
+                    }
+                }
+
+                // Carregar primeira pergunta
+                loadQuestion(currentQuestionIndex);
+
+                // ---- submit do quiz ----
+                if (submitBtn) {
+                    submitBtn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const q = questions[currentQuestionIndex];
+                        if (!q) return;
+
+                        let selectedValue = null;
+                        let selectedLabel = '';
+                        options.forEach((opt) => {
+                            if (opt.checked) {
+                                selectedValue = opt.value;
+                                const label = opt.closest('label');
+                                if (label) {
+                                    selectedLabel = label.textContent.trim();
+                                }
+                            }
+                        });
+
+                        if (selectedValue === null) {
+                            if (quizFeedback) {
+                                quizFeedback.innerHTML = '⚠️ Por favor, selecione uma alternativa.';
+                                quizFeedback.style.background = '#fce4e4';
+                                quizFeedback.setAttribute('role', 'alert');
+                            }
+                            return;
+                        }
+
+                        const isCorrect = (parseInt(selectedValue) === q.correct);
+                        const correctText = q.options[q.correct];
+
+                        if (isCorrect) {
+                            totalCorrect++;
+                            if (quizFeedback) {
+                                quizFeedback.innerHTML = `✅ Correto! A resposta é "${correctText}". 🎉<br><span style="font-size:1rem; opacity:0.8;">${q.explicacao || ''}</span>`;
+                                quizFeedback.style.background = '#c8f0d6';
+                                quizFeedback.setAttribute('role', 'status');
+                            }
+                        } else {
+                            if (quizFeedback) {
+                                quizFeedback.innerHTML = `❌ Não foi dessa vez. A resposta correta é "${correctText}".<br><span style="font-size:1rem; opacity:0.8;">${q.explicacao || ''}</span>`;
+                                quizFeedback.style.background = '#fce4e4';
+                                quizFeedback.setAttribute('role', 'alert');
+                            }
+                        }
+
+                        answeredQuestions++;
+                        
+                        // Desmarca para próxima tentativa
+                        options.forEach(opt => opt.checked = false);
+
+                        // Avança para a próxima pergunta após 3 segundos
+                        setTimeout(() => {
+                            currentQuestionIndex++;
+                            loadQuestion(currentQuestionIndex);
+                        }, 3000);
+                    });
+                }
+
+                // ---- Contador de estatísticas interativo ----
+                function animateNumbers() {
+                    const numeros = document.querySelectorAll('.numero');
+                    numeros.forEach(numero => {
+                        const texto = numero.textContent;
+                        const valor = parseFloat(texto.replace(/[^0-9.]/g, ''));
+                        if (!isNaN(valor)) {
+                            let atual = 0;
+                            const incremento = valor / 30;
+                            const timer = setInterval(() => {
+                                atual += incremento;
+                                if (atual >= valor) {
+                                    numero.textContent = texto;
+                                    clearInterval(timer);
+                                } else {
+                                    if (Number.isInteger(valor)) {
+                                        numero.textContent = Math.round(atual);
+                                    } else {
+                                        numero.textContent = atual.toFixed(1);
+                                    }
+                                }
+                            }, 30);
+                        }
+                    });
+                }
+
+                // Executar animação quando a página carregar
+                animateNumbers();
+
+                // ---- acessibilidade: navegação por teclado ----
+                document.querySelectorAll('button, input, .card, .banner-item, .dica-item, .footer-links a').forEach(el => {
+                    el.setAttribute('tabindex', '0');
+                    // Adicionar suporte para Enter e Espaço em elementos interativos não-padrão
+                    if (el.classList.contains('card') || el.classList.contains('banner-item') || el.classList.contains('dica-item')) {
+                        el.addEventListener('keydown', function(e) {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault();
+                                this.click();
+                            }
+                        });
+                    }
+                });
+
+                // ---- Adicionar ARIA labels para melhor acessibilidade ----
+                const bannerItems = document.querySelectorAll('.banner-item');
+                bannerItems.forEach((item, index) => {
+                    const texto = item.querySelector('span')?.textContent || `Item ${index + 1}`;
+                    item.setAttribute('aria-label', texto);
+                });
+
+                // ---- Adicionar atributos ARIA para o quiz ----
+                const quizBox = document.querySelector('.quiz-box');
+                if (quizBox) {
+                    quizBox.setAttribute('role', 'form');
+                    quizBox.setAttribute('aria-label', 'Quiz sobre bem-estar digital');
+                }
+
+                // ---- Criar elemento para anúncios de acessibilidade ----
+                const anuncio = document.createElement('div');
+                anuncio.id = 'anuncioAcessibilidade';
+                anuncio.setAttribute('role', 'status');
+                anuncio.setAttribute('aria-live', 'polite');
+                anuncio.style.position = 'absolute';
+                anuncio.style.width = '1px';
+                anuncio.style.height = '1px';
+                anuncio.style.padding = '0';
+                anuncio.style.margin = '-1px';
+                anuncio.style.overflow = 'hidden';
+                anuncio.style.clip = 'rect(0, 0, 0, 0)';
+                anuncio.style.border = '0';
+                document.body.appendChild(anuncio);
+
+                // ---- efeito de scroll suave para os links do rodapé ----
+                document.querySelectorAll('.footer-links a').forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const href = this.getAttribute('href');
+                        if (href === '#') {
+                            window.scrollTo({
+                                top: 0,
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+
+                // ---- mensagem no console ----
+                console.log('🌿 Bem-estar digital · versão super ampliada com mais conteúdo!');
+                console.log(`📊 Quiz com ${questions.length} perguntas disponíveis.`);
+                console.log('♿ Acessibilidade ativada!');
+
+            }); // Fim do DOMContentLoaded
+
+        })();
+    </script>
+
+    <noscript>
+        <div style="background:#ffe0b0; padding:1.5rem; border-radius:40px; font-size:1.4rem;">
+            Seu navegador não suporta JavaScript, mas o conteúdo está disponível.
+        </div>
+    </noscript>
+</body>
+</html>
